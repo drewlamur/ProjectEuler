@@ -9,7 +9,7 @@ puts "-" * 50
 puts "starting exercise 1: slooooooow"
 puts "-" * 50
 code = <<STR
-"""$i = 0
+$i = 0
 $array = []
 
 def find_smallest_multiple
@@ -25,7 +25,6 @@ def find_smallest_multiple
 	end
 	return $i	
 end
-"""
 STR
 
 puts code
@@ -58,7 +57,7 @@ puts "-" * 50
 puts "starting exercise 2 - recursion: also slooooooow"
 puts "-" * 50
 code = <<STR
-"""$i = 0
+$i = 0
 
 def find_smallest_multiple(array)
 	divisors = (1..10).to_a
@@ -70,7 +69,6 @@ def find_smallest_multiple(array)
 	end	
     array.size == divisors.size ? $i : find_smallest_multiple([])
 end
-"""
 STR
 
 puts code
@@ -102,7 +100,7 @@ puts "-" * 60
 puts "starting exercise 3: way fast using least common multiple"
 puts "-" * 60
 code = <<STR
-"""(1..20).inject(:lcm)"""
+(1..20).inject(:lcm)
 STR
 
 puts code

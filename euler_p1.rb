@@ -9,7 +9,7 @@ puts "-" * 50
 puts "starting exercise 1"
 puts "-" * 50
 code = <<STR
-"""(0...1000).select { |e| e if e % 3 == 0 || e % 5 == 0 }.inject(:+)"""
+(0...1000).select { |e| e if e % 3 == 0 || e % 5 == 0 }.inject(:+)
 STR
 
 puts code
@@ -23,7 +23,7 @@ puts "-" * 50
 puts "starting exercise 2"
 puts "-" * 50
 code = <<STR
-"""sum = 0; (0...1000).each { |e| sum += e if e % 3 == 0 || e % 5 == 0 }"""
+sum = 0; (0...1000).each { |e| sum += e if e % 3 == 0 || e % 5 == 0 }
 STR
 
 puts code

@@ -7,14 +7,13 @@ require 'time'
 
 puts "starting exercise"
 code = <<STR
-"""arr = [0,1]
+arr = [0,1]
 
 while arr[-1] < 4000000
 	arr << arr[-2] + arr[-1]
 end
 
 puts arr.select { |i| i if i % 2 == 0 }.inject(:+)
-"""
 STR
 
 puts code
