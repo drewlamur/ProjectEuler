@@ -1,7 +1,7 @@
 //Large sum
 //Problem # 13
-//Build using JSC
 
+var sum = 0;
 var numbers = "37107287533902102798797998220837590246510135740250\n" + 
 "46376937677490009712648124896970078050417018260538\n" + 
 "74324986199524741059474233309513058123726617309629\n" + 
@@ -103,11 +103,10 @@ var numbers = "37107287533902102798797998220837590246510135740250\n" +
 "20849603980134001723930671666823555245252804609722\n" + 
 "53503534226472524250874054075591789781264330331690"; 
 
-var array1 = numbers.split("\n");
-var array2 = [0];
+var arr = numbers.split("\n");
 
-for (i = 0; i < array1.length; i++) {
-	array2.push(parseInt(array1[i]) + parseInt(array2[0]));
+for (var i = 0; i < arr.length; i++) {
+    sum += parseInt(arr[i]);
 }
 
-debug(array2[array2.length - 1].toFixed(10));
+console.log(String(sum).substring(0,11));

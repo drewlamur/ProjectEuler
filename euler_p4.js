@@ -1,31 +1,30 @@
 //Largest palindrome product
 //Problem # 4
-//Build using JSC
 
 function range(start, stop) {
-    var array = [];
-    var length = stop - start; 
-    for (var i = 0; i <= length; i++) { 
-        array[i] = start;
+    var arr = [];
+    var length = stop - start;
+    for (var i = 0; i <= length; i++) {
+        arr[i] = start;
         start++;
     }
-    return array;
+    return arr;
 }
 
-var array = range(100,999);
+var arr = range(100, 999);
 
-function find_largest_palindrome(array) {
-	var palindromes = [];
-    for (i = 0; i < array.length; i++) {
-    	for (j = 0; j < array.length; i++) {
-    		k = i * j;
-    		if (String(k) === String(k).split('').reverse().join('')) {
-    			debug(k);
+function findLargestPalindrome(arr) {
+    var palindromes = [];
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr.length; j++) {
+            var k = arr[i] * arr[j];
+            if (String(k) === String(k).split("").reverse().join("")) {
+                console.log(k);
                 palindromes.push(k);
-    		}
-    	}
+            }
+        }
     }
-    return Math.max(palindromes);
+    return Math.max.apply(Math, palindromes);
 }
 
-debug(find_largest_palindrome(array));
+console.log("Answer is: " + findLargestPalindrome(arr));

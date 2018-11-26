@@ -1,15 +1,14 @@
 //Sum square difference
 //Problem # 6
-//Build using JSC
 
-sum    = 0;
-array = [0];
+var sum1 = 0;
+var sum2 = 0;
 
-for (i = 0; i <= 100; i++) {
-	sum += Math.pow(i, 2);
-	array.push(i + array[array.length - 1]);
+for (var i = 0; i <= 100; i++) {
+    sum1 += Math.pow(i, 2);
+    sum2 += i;
 }
 
-var answer = Math.pow(array[array.length - 1], 2) - sum;
+var answer = Math.pow(sum2, 2) - sum1;
 
-debug(answer);
+console.log(answer);
