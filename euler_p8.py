@@ -3,6 +3,8 @@
 #Largest product in a series
 #Problem # 8
 
+from functools import reduce
+
 numbers = """73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
 85861560789112949495459501737958331952853208805511
@@ -24,19 +26,19 @@ numbers = """73167176531330624919225119674426574742355349194934
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450""".split("\n")
 
-numbers    = ''.join([str(nums) for nums in numbers])
-container1 = []
-container2 = []
+numbers = "".join([str(nums) for nums in numbers])
+list1 = []
+list2 = []
 
 def multiply(x,y): return x * y
 
 for char in numbers:
-	container1.append(int(char))
+	list1.append(int(char))
 
-for i in range(0, len(container1)):
-	container2.append(reduce(multiply, container1[i:(13 + i)]))
+for i in range(0, len(list1)):
+	list2.append(reduce(multiply, list1[i:(13+i)]))
 
-print max(container2)
+print(max(list2))
 	
 
 

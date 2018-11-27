@@ -3,11 +3,11 @@
 #Sum square difference
 #Problem # 6
 
-nums  = 0
-array = []
+sums1 = 0
+sums2 = 0
 
 for i in range(1,101):
-	nums += i**2
-	array.append(i)
+   sums1 += i**2
+   sums2 += i
 
-print sum(array)**2 - nums
+print((sums2)**2 - sums1)
