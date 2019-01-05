@@ -5,40 +5,38 @@
 
 require 'time'
 
-puts "starting exercise 1"
+puts "starting example"
 code = <<STR
-t1 = Time.now
-
-array = []
+arr = []
 
 (100..999).each do |i1|
-	(100..999).each do |i2|
-		i3 = i1 * i2
-		if i3.to_s == i3.to_s.reverse
-			array << i3
-		end	 
-	end
+  (100..999).each do |i2|
+    i3 = i1 * i2
+    if i3.to_s == i3.to_s.reverse
+	arr << i3
+    end	 
+  end
 end
 
-puts array.max\n
+puts arr.max\n
 STR
 
 puts code
 
 t1 = Time.now
 
-array = []
+arr = []
 
 (100..999).each do |i1|
-	(100..999).each do |i2|
-		i3 = i1 * i2
-		if i3.to_s == i3.to_s.reverse
-			array << i3
-		end	 
-	end
+  (100..999).each do |i2|
+    i3 = i1 * i2
+    if i3.to_s == i3.to_s.reverse
+        arr << i3
+    end  
+  end
 end
 
-puts array.max
+puts arr.max
 
 t2 = Time.now - t1
 puts "runner time: #{t2}"

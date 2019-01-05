@@ -29,13 +29,10 @@ numbers = %{
 numbers = numbers.split("")
 numbers.collect!(&:to_i)
 
-array = []
+arr = []
 
 for i in (0..numbers.size - 1)
-	array << numbers[i..(12 + i)].inject(:*)
+  arr << numbers[i..(12 + i)].inject(:*)
 end
 
-puts array.max
-
-
-
+puts arr.max

@@ -2,6 +2,7 @@
 
 #Large sum
 #Problem # 13
+
 require 'time'
 
 t1 = Time.now
@@ -107,7 +108,10 @@ numbers = %{37107287533902102798797998220837590246510135740250
 20849603980134001723930671666823555245252804609722
 53503534226472524250874054075591789781264330331690}
 
-puts numbers.split("\n").map(&:to_i).inject(:+).to_s.split("").map(&:to_i)[0..9].join.to_i
+sum_of_nums = numbers.split("\n").map(&:to_i).inject(:+)
+first_ten_nums = sum_of_nums.to_s.split("").map(&:to_i)[0..9].join.to_i
+
+puts first_ten_nums
 
 t2 = Time.now - t1
 puts "runner time: #{t2}"

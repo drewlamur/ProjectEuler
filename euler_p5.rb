@@ -13,17 +13,17 @@ $i = 0
 $array = []
 
 def find_smallest_multiple
-	divisors = (1..10).to_a
-	until $array.size == divisors.size
-		$i += 1
-		$array = [] #reset
-		for j in divisors
-			if $i % j == 0
-				$array << j
-			end
-		end
-	end
-	return $i	
+  divisors = (1..10).to_a
+  until $array.size == divisors.size
+    $i += 1
+    $array = [] #reset
+    for j in divisors
+      if $i % j == 0
+        $array << j
+      end
+    end
+  end
+  return $i	
 end
 STR
 
@@ -35,17 +35,17 @@ $i = 0
 $array = []
 
 def find_smallest_multiple
-	divisors = (1..10).to_a
-	until $array.size == divisors.size
-		$i += 1
-		$array = [] #reset
-		for j in divisors
-			if $i % j == 0
-				$array << j
-			end
-		end
-	end
-	return $i	
+  divisors = (1..10).to_a
+  until $array.size == divisors.size
+    $i += 1
+    $array = [] #reset
+    for j in divisors
+      if $i % j == 0
+        $array << j
+      end
+    end
+  end
+  return $i     
 end
 
 puts find_smallest_multiple
@@ -60,14 +60,14 @@ code = <<STR
 $i = 0
 
 def find_smallest_multiple(array)
-	divisors = (1..10).to_a
-	$i += 1
-	divisors.each do |j|
-		if $i % j == 0
-			array << j
-		end
-	end	
-    array.size == divisors.size ? $i : find_smallest_multiple([])
+  divisors = (1..10).to_a
+  $i += 1
+  divisors.each do |j|
+    if $i % j == 0
+      array << j
+    end
+  end	
+  array.size == divisors.size ? $i : find_smallest_multiple([])
 end
 STR
 
@@ -78,14 +78,14 @@ t1 = Time.now
 $i = 0
 
 def find_smallest_multiple(array)
-	divisors = (1..10).to_a
-	$i += 1
-	divisors.each do |j|
-		if $i % j == 0
-			array << j
-		end
-	end	
-    array.size == divisors.size ? $i : find_smallest_multiple([])
+  divisors = (1..10).to_a
+  $i += 1
+  divisors.each do |j|
+    if $i % j == 0
+      array << j
+    end
+  end   
+  array.size == divisors.size ? $i : find_smallest_multiple([])
 end
 
 puts find_smallest_multiple([])
@@ -97,7 +97,7 @@ t2 = Time.now - t1
 puts "runner time: #{t2}"
 
 puts "-" * 60
-puts "starting exercise 3: way fast using least common multiple"
+puts "starting exercise 3: more efficient using least common multiple"
 puts "-" * 60
 code = <<STR
 (1..20).inject(:lcm)
