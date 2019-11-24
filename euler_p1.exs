@@ -1,3 +1,6 @@
+# Multiples of 3 and 5
+# Problem # 1
+
 defmodule ProblemOne do
   def getMultiples() do
     nums = Enum.to_list 1..999
